@@ -46,14 +46,31 @@ function cerrarAviso(){
 $(document).ready(function(){
 	
 	// Muestra el aviso de privacidad
-	$('#aviso-trigger').on('click', function(){
+	$('.terminos-wrapper .message').on('click', function(){
 		abrirAviso();
 	});
 	
 	// Aceptar aviso de privacidad
 	$('.js-btn-aceptar-aviso').on('click', function(e){
 		e.preventDefault();
+		
+		$('.js-check-box-aviso').css('background', '#D98C34');
+		
+		$('.js-check-box-aviso').addClass('js-check-box-aviso-checked');
 		cerrarAviso();
+	});
+	
+	$('.js-check-box-aviso').on('click', function(e){
+		e.preventDefault();
+		var elemento = $(this);
+		
+		if(elemento.hasClass('js-check-box-aviso-checked')){
+			$('.js-check-box-aviso').css('background', 'white');
+			
+			$('.js-check-box-aviso').removeClass('js-check-box-aviso-checked');
+		}else{
+			abrirAviso();
+		}
 	});
 	
 	// Cerrar aviso de privacidad
@@ -102,10 +119,28 @@ $(document).ready(function(){
 			'#form-usuario-participar',
 			function() {
 				var form = $(this);
+				
+//				if(!$('.js-check-box-aviso').hasClass('js-check-box-aviso-checked')){
+//					
+//					swal({
+//						  title: "Espera",
+//						  text: "Debe leer el aviso de privacidad",
+//						  type: "warning",
+//						  showCancelButton: true,
+//						  
+//						  closeOnConfirm: true
+//						});
+//					
+//					return false;
+//				}
+				
 				// return false if form still have some validation errors
 				if (form.find('.has-error').length) {
 					return false;
 				}
+				
+				var l = Ladda.create(document.getElementById('js-btn-guardar-informacion'));
+			 	l.start();
 
 				var data = form.serialize(); 
 
@@ -119,6 +154,11 @@ $(document).ready(function(){
 						step3();
 						// Reseteamos el modal
 						document.getElementById("form-usuario-participar").reset();
+						
+						l.stop();
+					},
+					error:function(){
+						l.stop();
 					},
 					statusCode: {
 					    404: function() {

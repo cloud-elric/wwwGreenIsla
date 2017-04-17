@@ -74,14 +74,14 @@ $this->title = 'Fiesta americana';
 				] )->label(false);
 				?>
 				<div class="terminos-wrapper">
-					<div class="check-box"></div>
+					<div class="check-box js-check-box-aviso"></div>
 					<p class="message">
 						He leído y no acepto el <span id="aviso-trigger" class="hightlight">aviso
 							de privacidad</span>
 					</p>
 				</div>
 				<div class="form-cta-wrapper">
-					<button class="btn btn-primary" type="submit">Enviar</button>
+					<button class="btn btn-primary ladda-button" id="js-btn-guardar-informacion"  data-style="zoom-in" type="submit"><span class="ladda-label">Enviar</span></button>
 				</div>	
 			<?php
 			// Cierre de etiqueta </form>
