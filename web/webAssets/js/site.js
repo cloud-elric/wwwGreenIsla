@@ -1,16 +1,33 @@
+/**
+ * JS standar para micrositio de registro
+ *
+ * # author      2 Geeks one Monkey
+ * # copyright   Copyright (c) 2017, 2 Geeks one Monkey
+ * # website     www.2gom.com.mx
+ * # contact     contacto@2gom.com.mx
+ */
+
 var contenedorRegistro = '.js-registro-contenedor';
 var contenedorPremio = '.js-premio-contenedor';
 var contenedorGracias = '.js-gracias-contenedor';
 var contenedorTarjetas = '.js-tarjetas-contenedor';
+var contenedorGlobal = '.container';
 
 function step1(){
 	$(contenedorPremio).hide();
 	$(contenedorTarjetas).show();
+	$(contenedorGlobal).addClass('container-home');
+	$(contenedorGlobal).removeClass('container-ribbon');
+	
+	$('img.logo').hide();
 }
 
 function step2(){
 	$(contenedorTarjetas).hide();
 	$(contenedorRegistro).show();
+	$(contenedorGlobal).removeClass('container-home');
+	$(contenedorGlobal).addClass('container-ribbon');
+	$('img.logo').show();
 }
 
 function step3(){
@@ -20,10 +37,13 @@ function step3(){
 
 $(document).ready(function(){
 	
-	$('#entusuarios-id_tarjeta input').on('change', function(e){
-		if($(this).prop('checked')){
-			step2();
-		}
+	$('.js-tipo-tarjeta').on('click', function(e){
+		e.preventDefault();
+		var elemento = $(this);
+		var data = elemento.data('value');
+		
+		$('#entusuarios-id_tarjeta').val(data);
+		step2();
 	});
 	
 	// Al campo de texto número validara solo numeros
@@ -70,6 +90,7 @@ $(document).ready(function(){
 					data : data, // La informacion a mandar
 					dataType: 'HTML',  // Tipo de respuesta
 					success : function(response) { // Cuando la peticion sea exitosamente se ejecutara la funcion
+						$('.js-premio-ajax').html(response);
 						step3();
 						// Reseteamos el modal
 						document.getElementById("form-usuario-participar").reset();

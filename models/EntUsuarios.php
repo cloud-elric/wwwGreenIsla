@@ -35,12 +35,12 @@ class EntUsuarios extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_tarjeta', 'txt_nombre_completo', 'txt_telefono_celular', 'txt_cp', 'num_edad', 'num_patos'], 'required'],
-            [['id_tarjeta', 'num_edad', 'num_patos'], 'integer'],
+            [['id_tarjeta', 'txt_nombre_completo', 'txt_telefono_celular', 'txt_cp', 'num_edad', 'num_patos'], 'required', 'message'=>'Campo requerido'],
+            [['id_tarjeta', 'num_edad', 'num_patos'], 'integer', 'message'=>'El campo debe ser numerico'],
             [['fch_registro'], 'safe'],
             [['txt_nombre_completo'], 'string', 'max' => 150],
-            [['txt_telefono_celular'], 'string', 'max' => 10],
-            [['txt_cp'], 'string', 'max' => 5],
+            [['txt_telefono_celular'], 'string', 'max' => 10, 'min' => 10, 'tooLong' => 'El campo no debe superar 10 dígitos','tooShort' => 'El campo debe ser mínimo de 10 digítos'],
+            [['txt_cp'], 'string', 'max' => 5, 'min'=>5,'tooLong' => 'El campo no debe superar 5 dígitos','tooShort' => 'El campo debe ser mínimo de 5 digítos'],
             [['txt_email'], 'string', 'max' => 50],
             [['id_tarjeta'], 'exist', 'skipOnError' => true, 'targetClass' => CatTiposTarjetas::className(), 'targetAttribute' => ['id_tarjeta' => 'id_tarjeta']],
         ];

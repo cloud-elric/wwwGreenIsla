@@ -87,8 +87,17 @@ class SiteController extends Controller {
 					'b_reclamado' => '0' 
 			] )->one ();
 			
+			$vistaPremio = 'premio-descuento';
+			
 			if ($premio) {
 				$usuario->id_premio = $premio->id_premio;
+				
+				if($premio->txt_nombre=='Monedero'){
+					$vistaPremio = 'premio-monedero';
+				}else if($premio->txt_nombre=='Estancia en villas'){
+					$vistaPremio = 'premio-instancia';
+				}
+				
 			} else {
 				$usuario->id_premio = 1;
 			}
@@ -99,9 +108,11 @@ class SiteController extends Controller {
 					$premio->save ();
 				}
 			}
+			
+			return $this->renderAjax ( $vistaPremio );
+			
 		}
 		
-		return $this->renderAjax ( 'premio' );
 	}
 	
 	/**
