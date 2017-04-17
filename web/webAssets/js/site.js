@@ -1,0 +1,109 @@
+var contenedorRegistro = '.js-registro-contenedor';
+var contenedorPremio = '.js-premio-contenedor';
+var contenedorGracias = '.js-gracias-contenedor';
+var contenedorTarjetas = '.js-tarjetas-contenedor';
+
+function step1(){
+	$(contenedorPremio).hide();
+	$(contenedorTarjetas).show();
+}
+
+function step2(){
+	$(contenedorTarjetas).hide();
+	$(contenedorRegistro).show();
+}
+
+function step3(){
+	$(contenedorRegistro).hide();
+	$(contenedorPremio).show();
+}
+
+$(document).ready(function(){
+	
+	$('#entusuarios-id_tarjeta input').on('change', function(e){
+		if($(this).prop('checked')){
+			step2();
+		}
+	});
+	
+	// Al campo de texto número validara solo numeros
+	$('#entusuarios-txt_telefono_celular').keydown(function(e) {
+		validarSoloNumeros(e);
+	});
+	
+	// Al campo de texto número validara solo numeros
+	$('#entusuarios-txt_cp').keydown(function(e) {
+		validarSoloNumeros(e);
+	});
+	
+	// Al campo de texto número validara solo numeros
+	$('#entusuarios-num_edad').keydown(function(e) {
+		validarSoloNumeros(e);
+	});
+	
+	
+	// Al campo de texto número validara solo numeros
+	$('#entusuarios-num_patos').keydown(function(e) {
+		validarSoloNumeros(e);
+	});
+	
+	$('.js-boton-inicio').on('click', function(e){
+		step1();
+	});
+	
+	
+	$('body').on(
+			'beforeSubmit',
+			'#form-usuario-participar',
+			function() {
+				var form = $(this);
+				// return false if form still have some validation errors
+				if (form.find('.has-error').length) {
+					return false;
+				}
+
+				var data = form.serialize(); 
+
+				$.ajax({
+					url : 'site/guardar-informacion',// url para peticion
+					type : 'post', // Metodo en el que se enviara la informacion
+					data : data, // La informacion a mandar
+					dataType: 'HTML',  // Tipo de respuesta
+					success : function(response) { // Cuando la peticion sea exitosamente se ejecutara la funcion
+						step3();
+						// Reseteamos el modal
+						document.getElementById("form-usuario-participar").reset();
+					},
+					statusCode: {
+					    404: function() {
+					      //alert( "page not found" );
+					    }
+					  }
+				});
+				return false;
+			});
+	
+	
+});
+
+/**
+ * Valida que cuando se aprieta un boton sea solo números
+ * 
+ * @param e
+ */
+function validarSoloNumeros(e) {
+	// Allow: backspace, delete, tab, escape, enter and .
+	if ($.inArray(e.keyCode, [ 46, 8, 9, 27, 13, 110 ]) !== -1 ||
+	// Allow: Ctrl+A, Command+A
+	(e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+	// Allow: home, end, left, right, down, up
+	(e.keyCode >= 35 && e.keyCode <= 40)) {
+		// let it happen, don't do anything
+		return;
+	}
+	// Ensure that it is a number and stop the keypress
+	if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57))
+			&& (e.keyCode < 96 || e.keyCode > 105)) {
+		e.preventDefault();
+	}
+}
