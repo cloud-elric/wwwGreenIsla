@@ -35,7 +35,32 @@ function step3(){
 	$(contenedorPremio).show();
 }
 
+function abrirAviso(){
+	$('.aviso-box').show();
+}
+
+function cerrarAviso(){
+	$('.aviso-box').hide();
+}
+
 $(document).ready(function(){
+	
+	// Muestra el aviso de privacidad
+	$('#aviso-trigger').on('click', function(){
+		abrirAviso();
+	});
+	
+	// Aceptar aviso de privacidad
+	$('.js-btn-aceptar-aviso').on('click', function(e){
+		e.preventDefault();
+		cerrarAviso();
+	});
+	
+	// Cerrar aviso de privacidad
+	$('.js-btn-cerrar-aviso').on('click', function(e){
+		e.preventDefault();
+		cerrarAviso();
+	});
 	
 	$('.js-tipo-tarjeta').on('click', function(e){
 		e.preventDefault();

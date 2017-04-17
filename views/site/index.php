@@ -44,33 +44,39 @@ $this->title = 'Fiesta americana';
 				<?php
 				// Genera un input
 				echo $form->field ( $usuario, 'id_tarjeta' )->hiddenInput( [ 
-						'maxlength' => 150 
+						'maxlength' => 150,
+						'placeholder'=>'Nombre'
 				] )->label(false);
 				// Genera un input
 				echo $form->field ( $usuario, 'txt_nombre_completo' )->textInput ( [ 
-						'maxlength' => 150 
-				] );
+						'maxlength' => 150,
+						'placeholder'=>'Nombre' 
+				] )->label(false);
+				// Genera un input
+				echo $form->field ( $usuario, 'txt_cp' )->textInput ( [
+						'maxlength' => 5,
+						'placeholder'=>'C.P.'
+				] )->label(false);
+				// Genera un input
+				echo $form->field ( $usuario, 'num_edad' )->textInput ( [
+						'maxlength' => 2,
+						'placeholder'=>'Edad'
+				] )->label(false);
 				// Genera un input
 				echo $form->field ( $usuario, 'txt_telefono_celular' )->textInput ( [ 
-						'maxlength' => 10 
-				] );
-				// Genera un input
-				echo $form->field ( $usuario, 'txt_cp' )->textInput ( [ 
-						'maxlength' => 5 
-				] );
-				// Genera un input
-				echo $form->field ( $usuario, 'num_edad' )->textInput ( [ 
-						'maxlength' => 2 
-				] );
+						'maxlength' => 10,
+						'placeholder'=>'Teléfono' 
+				] )->label(false);
 				// Genera un input
 				echo $form->field ( $usuario, 'num_patos' )->textInput ( [ 
-						'maxlength' => 3 
-				] );
+						'maxlength' => 3,
+						'placeholder'=>'Cantidad de patos' 
+				] )->label(false);
 				?>
 				<div class="terminos-wrapper">
 					<div class="check-box"></div>
 					<p class="message">
-						He leido y no acepto el <span id="aviso-trigger" class="hightlight">aviso
+						He leído y no acepto el <span id="aviso-trigger" class="hightlight">aviso
 							de privacidad</span>
 					</p>
 				</div>
@@ -105,11 +111,11 @@ $this->title = 'Fiesta americana';
  <div class="aviso-box" style="display:none;">
     
       <div class="close-btn-wrapper">
-        <a class="" href=""><i class="ion-close-circled"> </i>cerrar</a> 
+        <a class="js-btn-cerrar-aviso" href=""><i class="ion-close-circled"> </i>cerrar</a> 
       </div>
 
       <p><strong>GRUPO POSADAS, S.A.B. DE C.V.</strong> y sus filiales y/o subsidiarias (en lo sucesivo, Posadas), con domicilio en Prolongación Paseo de la Reforma # 1015. Piso 9. Col. Santa Fe Del. Cuajimalpa de Morelos, C.P. 05348. Ciudad de  México, es el responsable del tratamiento de sus Datos Personales. La Información que nos proporciona será utilizada por Posadas para prestar los servicios que usted le solicita: reservaciones, compra de paquetes vacacionales, membresía del club vacacional, afiliación a nuestros programas de lealtad, organización de eventos y reuniones sociales, compra de productos y/o servicios turísticos. Asimismo, palomeando esta casilla [ ] les solicito que mi información no se utilice para ofrecerme promociones y productos turísticos y comerciales, servicios especiales, boletines informativos, encuestas, sorteos de premios y otros concursos. Usted podrá consultar el Aviso de Privacidad completo publicado en la página de internet <a href="www.posadas.com/es/privacidad">www.posadas.com/es/privacidad.</a> <br> <br> Consiento que mis datos personales sean utilizados para finalidades y conforme a lo establecido en el Aviso de Privacidad.</p>
-      <a class="btn btn-simple" href="">Acepto este aviso</a>
+      <a class="btn btn-simple js-btn-aceptar-aviso" href="">Acepto este aviso</a>
   </div>
 
   <img style="display:none;" class="logo" src="webassets/images/logo-fa.png" alt="Fiesta Americana">
