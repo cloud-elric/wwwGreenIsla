@@ -10,6 +10,7 @@ use app\models\LoginForm;
 use app\models\CatTiposTarjetas;
 use app\models\EntUsuarios;
 use app\models\CatPremios;
+use yii\db\Expression;
 
 class SiteController extends Controller {
 	/**
@@ -82,37 +83,61 @@ class SiteController extends Controller {
 		$usuario = new EntUsuarios ();
 		
 		if ($usuario->load ( Yii::$app->request->post () )) {
-			$premio = CatPremios::find()->where ( [ 
+			$premio = CatPremios::find ()->where ( [ 
 					'num_codigo' => $usuario->num_patos,
 					'b_reclamado' => '0' 
-			] )->one ();
+			] )->andWhere ( new Expression ( 'fch_reclamado IS NULL' ) )->one ();
 			
 			$vistaPremio = 'premio-descuento';
 			
-			if ($premio) {
-				$usuario->id_premio = $premio->id_premio;
+			$premioEntregadoHoy = CatPremios::find()->where(new Expression ( 'DATE(fch_reclamado) = DATE(NOW())' ))->all();
+						
+			if ($premio && count($premioEntregadoHoy)==0) {
 				
-				if($premio->txt_nombre=='Monedero'){
-					$vistaPremio = 'premio-monedero';
-				}else if($premio->txt_nombre=='Estancia en villas'){
-					$vistaPremio = 'premio-instancia';
-				}
+					$usuario->id_premio = $premio->id_premio;
+					
+					if ($premio->txt_nombre == 'Monedero') {
+						$vistaPremio = 'premio-monedero';
+					} else if ($premio->txt_nombre == 'Estancia en villas') {
+						$vistaPremio = 'premio-instancia';
+					}
 				
 			} else {
 				$usuario->id_premio = 1;
 			}
 			
-			if ($usuario->save()) {
-				if ($premio) {
+			if ($usuario->save ()) {
+				if ($premio  && count($premioEntregadoHoy)==0) {
 					$premio->b_reclamado = 1;
+					$premio->fch_reclamado = $this->getFechaActual ();
 					$premio->save ();
 				}
 			}
 			
 			return $this->renderAjax ( $vistaPremio );
-			
 		}
+	}
+	
+	/**
+	 * Cambia el formato de la fecha
+	 *
+	 * @param unknown $string
+	 */
+	public static function changeFormatDate($string) {
+		$date = date_create ( $string );
+		return date_format ( $date, "d-M-Y" );
+	}
+	
+	/**
+	 * Obtenemos la fecha actual para almacenarla
+	 *
+	 * @return string
+	 */
+	private function getFechaActual() {
 		
+		// Inicializamos la fecha y hora actual
+		$fecha = date ( 'Y-m-d H:i:s', time () );
+		return $fecha;
 	}
 	
 	/**
