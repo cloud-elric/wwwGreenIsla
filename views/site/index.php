@@ -118,4 +118,4 @@ $this->title = 'Fiesta americana';
       <a class="btn btn-simple js-btn-aceptar-aviso" href="">Acepto este aviso</a>
   </div>
 
-  <img style="display:none;" class="logo" src="webassets/images/logo-fa.png" alt="Fiesta Americana">
+  <img style="display:none;" class="logo" src="webAssets/images/logo-fa.png" alt="Fiesta Americana">

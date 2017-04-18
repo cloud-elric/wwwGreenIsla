@@ -110,6 +110,7 @@ $(document).ready(function(){
 	});
 	
 	$('.js-boton-inicio').on('click', function(e){
+		e.preventDefault();
 		step1();
 	});
 	
