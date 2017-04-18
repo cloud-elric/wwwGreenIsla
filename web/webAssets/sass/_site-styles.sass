@@ -12,7 +12,7 @@ body
 
 .aviso-box
 	display: block
-	width: 600px
+	width: 60%
 	padding: 20px
 	background-color: $white
 	border-radius: 5px
@@ -20,8 +20,17 @@ body
 	top: 50%
 	left: 50%
 	margin-left: -300px
-	margin-top: -200px
+	margin-top: -300px
 	+box-shadow(0px 10px 30px -15px $secondary)
+	z-index: 20
+	+respond-to(xs)
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		margin-left: 0
+		margin-top: 0
+		padding-bottom: 50px
 
 	.close-btn-wrapper
 		text-align: right
@@ -30,11 +39,21 @@ body
 			width: 10px
 			font-size: .8em
 			font-weight: $regular
-	
+
 	p
 		margin: 20px auto
 		text-align: justify
+		line-height: 1.5em
+		+respond-to(xs)
+			text-align: left
 
+	a.btn
+		width: 100%
+		+respond-to(xs)
+			position: fixed
+			bottom: 10px
+			left: 45%
+			margin-left: -45%
 
 .container
 	display: flex
@@ -54,13 +73,15 @@ body
 			box-sizing: border-box
 			display: block
 			height: 50px
-			margin: 15px 0 
+			margin: 15px 0
 			border: 2px solid $primary
 			width: 100%
 			padding: 0 15px
-			border-radius: 3px 
+			border-radius: 3px
 			font-family: $f-base
 			font-weight: $bold
+			background-color: $white
+
 		.terminos-wrapper
 			margin: 20px 0
 			display: flex
@@ -86,7 +107,7 @@ body
 			text-align: right
 			a
 				margin: 0 auto
-		
+
 
 
 	/* Para la pantalla de premio */
@@ -98,15 +119,15 @@ body
 			margin-bottom: 10px
 		h1
 			color: $accent
-		h3 
+		h3
 			color: $primary
 
 		p
-			margin-bottom: 20px	
+			margin-bottom: 20px
 
 .container-ribbon
 	flex-direction: column
-	background: 
+	background:
 		image: url("../images/ribbon.png")
 		position: top right
 		repeat: no-repeat
@@ -119,10 +140,11 @@ body
 .container-home
 	justify-content: flex-end
 	align-items: flex-end
-	background: 
-		image: url("../images/logo-fa-with-ribbon.png")
-		position: top left
+	background:
+		image: url("../images/background-with-logo.jpg")
+		position: center
 		repeat: no-repeat
+		size: cover
 
 	.selecciona-tarjeta-wrapper
 		text-align: center
@@ -137,6 +159,9 @@ body
 
 .logo
 	position: absolute
-	z-index: 2
+	z-index: -1
 	bottom: 40px
 	right: 40px
+	+respond-to(xs)
+		left: 20px
+		bottom: 20px

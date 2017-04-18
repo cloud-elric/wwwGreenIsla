@@ -409,7 +409,7 @@ body {
 
 .aviso-box {
   display: block;
-  width: 600px;
+  width: 60%;
   padding: 20px;
   background-color: #FFF;
   border-radius: 5px;
@@ -417,10 +417,20 @@ body {
   top: 50%;
   left: 50%;
   margin-left: -300px;
-  margin-top: -200px;
+  margin-top: -300px;
   -webkit-box-shadow: 0px 10px 30px -15px #A79D93;
   -moz-box-shadow: 0px 10px 30px -15px #A79D93;
-  box-shadow: 0px 10px 30px -15px #A79D93; }
+  box-shadow: 0px 10px 30px -15px #A79D93;
+  z-index: 20; }
+  @media screen and (max-width: 768px) {
+    .aviso-box {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 0;
+      margin-top: 0;
+      padding-bottom: 50px; } }
   .aviso-box .close-btn-wrapper {
     text-align: right; }
     .aviso-box .close-btn-wrapper a {
@@ -429,7 +439,19 @@ body {
       font-weight: 400; }
   .aviso-box p {
     margin: 20px auto;
-    text-align: justify; }
+    text-align: justify;
+    line-height: 1.5em; }
+    @media screen and (max-width: 768px) {
+      .aviso-box p {
+        text-align: left; } }
+  .aviso-box a.btn {
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      .aviso-box a.btn {
+        position: fixed;
+        bottom: 10px;
+        left: 45%;
+        margin-left: -45%; } }
 
 .container {
   display: flex;
@@ -455,7 +477,8 @@ body {
       padding: 0 15px;
       border-radius: 3px;
       font-family: "Montserrat", sans-serif;
-      font-weight: 700; }
+      font-weight: 700;
+      background-color: #FFF; }
     .container .form-wrapper .terminos-wrapper {
       margin: 20px 0;
       display: flex;
@@ -503,9 +526,10 @@ body {
 .container-home {
   justify-content: flex-end;
   align-items: flex-end;
-  background-image: url("../images/logo-fa-with-ribbon.png");
-  background-position: top left;
-  background-repeat: no-repeat; }
+  background-image: url("../images/background-with-logo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .container-home .selecciona-tarjeta-wrapper {
     text-align: center;
     margin-right: 70px;
@@ -518,8 +542,10 @@ body {
 
 .logo {
   position: absolute;
-  z-index: 2;
+  z-index: -1;
   bottom: 40px;
   right: 40px; }
-
-/*# sourceMappingURL=site.css.map */
+  @media screen and (max-width: 768px) {
+    .logo {
+      left: 20px;
+      bottom: 20px; } }
