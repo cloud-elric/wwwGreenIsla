@@ -35,7 +35,7 @@ class EntUsuarios extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_tarjeta', 'txt_nombre_completo', 'txt_telefono_celular', 'txt_cp', 'num_edad', 'num_patos'], 'required', 'message'=>'Campo requerido'],
+            [['id_tarjeta', 'txt_nombre_completo', 'txt_telefono_celular', 'num_edad', 'num_patos'], 'required', 'message'=>'Campo requerido'],
             [['id_tarjeta', 'num_edad', 'num_patos'], 'integer', 'message'=>'El campo debe ser numerico'],
             [['fch_registro'], 'safe'],
             [['txt_nombre_completo'], 'string', 'max' => 150],
