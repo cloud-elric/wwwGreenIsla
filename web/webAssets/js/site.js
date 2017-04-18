@@ -1,16 +1,33 @@
+/**
+ * JS standar para micrositio de registro
+ *
+ * # author      2 Geeks one Monkey
+ * # copyright   Copyright (c) 2017, 2 Geeks one Monkey
+ * # website     www.2gom.com.mx
+ * # contact     contacto@2gom.com.mx
+ */
+
 var contenedorRegistro = '.js-registro-contenedor';
 var contenedorPremio = '.js-premio-contenedor';
 var contenedorGracias = '.js-gracias-contenedor';
 var contenedorTarjetas = '.js-tarjetas-contenedor';
+var contenedorGlobal = '.container';
 
 function step1(){
 	$(contenedorPremio).hide();
 	$(contenedorTarjetas).show();
+	$(contenedorGlobal).addClass('container-home');
+	$(contenedorGlobal).removeClass('container-ribbon');
+	
+	$('img.logo').hide();
 }
 
 function step2(){
 	$(contenedorTarjetas).hide();
 	$(contenedorRegistro).show();
+	$(contenedorGlobal).removeClass('container-home');
+	$(contenedorGlobal).addClass('container-ribbon');
+	$('img.logo').show();
 }
 
 function step3(){
@@ -18,12 +35,57 @@ function step3(){
 	$(contenedorPremio).show();
 }
 
+function abrirAviso(){
+	$('.aviso-box').show();
+}
+
+function cerrarAviso(){
+	$('.aviso-box').hide();
+}
+
 $(document).ready(function(){
 	
-	$('#entusuarios-id_tarjeta input').on('change', function(e){
-		if($(this).prop('checked')){
-			step2();
+	// Muestra el aviso de privacidad
+	$('.terminos-wrapper .message').on('click', function(){
+		abrirAviso();
+	});
+	
+	// Aceptar aviso de privacidad
+	$('.js-btn-aceptar-aviso').on('click', function(e){
+		e.preventDefault();
+		
+		$('.js-check-box-aviso').css('background', '#D98C34');
+		
+		$('.js-check-box-aviso').addClass('js-check-box-aviso-checked');
+		cerrarAviso();
+	});
+	
+	$('.js-check-box-aviso').on('click', function(e){
+		e.preventDefault();
+		var elemento = $(this);
+		
+		if(elemento.hasClass('js-check-box-aviso-checked')){
+			$('.js-check-box-aviso').css('background', 'white');
+			
+			$('.js-check-box-aviso').removeClass('js-check-box-aviso-checked');
+		}else{
+			abrirAviso();
 		}
+	});
+	
+	// Cerrar aviso de privacidad
+	$('.js-btn-cerrar-aviso').on('click', function(e){
+		e.preventDefault();
+		cerrarAviso();
+	});
+	
+	$('.js-tipo-tarjeta').on('click', function(e){
+		e.preventDefault();
+		var elemento = $(this);
+		var data = elemento.data('value');
+		
+		$('#entusuarios-id_tarjeta').val(data);
+		step2();
 	});
 	
 	// Al campo de texto número validara solo numeros
@@ -48,6 +110,7 @@ $(document).ready(function(){
 	});
 	
 	$('.js-boton-inicio').on('click', function(e){
+		e.preventDefault();
 		step1();
 	});
 	
@@ -57,10 +120,28 @@ $(document).ready(function(){
 			'#form-usuario-participar',
 			function() {
 				var form = $(this);
+				
+//				if(!$('.js-check-box-aviso').hasClass('js-check-box-aviso-checked')){
+//					
+//					swal({
+//						  title: "Espera",
+//						  text: "Debe leer el aviso de privacidad",
+//						  type: "warning",
+//						  showCancelButton: true,
+//						  
+//						  closeOnConfirm: true
+//						});
+//					
+//					return false;
+//				}
+				
 				// return false if form still have some validation errors
 				if (form.find('.has-error').length) {
 					return false;
 				}
+				
+				var l = Ladda.create(document.getElementById('js-btn-guardar-informacion'));
+			 	l.start();
 
 				var data = form.serialize(); 
 
@@ -70,9 +151,15 @@ $(document).ready(function(){
 					data : data, // La informacion a mandar
 					dataType: 'HTML',  // Tipo de respuesta
 					success : function(response) { // Cuando la peticion sea exitosamente se ejecutara la funcion
+						$('.js-premio-ajax').html(response);
 						step3();
 						// Reseteamos el modal
 						document.getElementById("form-usuario-participar").reset();
+						
+						l.stop();
+					},
+					error:function(){
+						l.stop();
 					},
 					statusCode: {
 					    404: function() {
