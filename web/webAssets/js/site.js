@@ -158,6 +158,9 @@ $(document).ready(function(){
 						document.getElementById("form-usuario-participar").reset();
 
 						l.stop();
+						$('.js-check-box-aviso').css('background', 'white');
+						
+						$('.js-check-box-aviso').removeClass('js-check-box-aviso-checked');
 					},
 					error:function(){
 						l.stop();
