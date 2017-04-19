@@ -513,10 +513,15 @@ body {
   .container .premio {
     width: 500px;
     text-align: center; }
+    @media screen and (max-width: 768px) {
+      .container .premio {
+        width: 90%;
+        margin: 0 auto; } }
     .container .premio h1, .container .premio h3, .container .premio p {
       margin-bottom: 10px; }
     .container .premio h1 {
-      color: #EAB92C; }
+      color: #EAB92C;
+      max-width: 100%; }
     .container .premio h3 {
       color: #D98C34; }
     .container .premio p {

@@ -122,10 +122,14 @@ body
 	.premio
 		width: 500px
 		text-align: center
+		+respond-to(xs)
+			width: 90%
+			margin: 0 auto
 		h1,h3,p
 			margin-bottom: 10px
 		h1
 			color: $accent
+			max-width: 100%
 		h3
 			color: $primary
 

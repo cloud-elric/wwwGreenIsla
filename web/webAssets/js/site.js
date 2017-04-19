@@ -20,6 +20,7 @@ function step1(){
 	$(contenedorGlobal).removeClass('container-ribbon');
 
 	$('img.logo').hide();
+	$('img.logo-evento').show();
 }
 
 function step2(){
@@ -159,7 +160,7 @@ $(document).ready(function(){
 
 						l.stop();
 						$('.js-check-box-aviso').css('background', 'white');
-						
+
 						$('.js-check-box-aviso').removeClass('js-check-box-aviso-checked');
 					},
 					error:function(){
