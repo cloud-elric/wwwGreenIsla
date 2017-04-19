@@ -478,7 +478,14 @@ body {
       border-radius: 3px;
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
-      background-color: #FFF; }
+      background-color: #FFF;
+      color: #A79D93; }
+    .container .form-wrapper input::placeholder {
+      opacity: .7; }
+    .container .form-wrapper .help-block {
+      font-size: .8em;
+      text-indent: 10px;
+      color: white; }
     .container .form-wrapper .terminos-wrapper {
       margin: 20px 0;
       display: flex;
@@ -524,16 +531,17 @@ body {
     margin-top: 100px; }
 
 .container-home {
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   background-image: url("../images/background-with-logo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   .container-home .selecciona-tarjeta-wrapper {
     text-align: center;
-    margin-right: 70px;
-    margin-bottom: 150px; }
+    background-color: rgba(216, 216, 216, 0.3);
+    border-radius: 5px;
+    padding: 20px; }
     .container-home .selecciona-tarjeta-wrapper h3 {
       margin-bottom: 20px; }
     .container-home .selecciona-tarjeta-wrapper a {
