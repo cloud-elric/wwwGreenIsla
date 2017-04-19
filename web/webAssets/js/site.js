@@ -18,7 +18,7 @@ function step1(){
 	$(contenedorTarjetas).show();
 	$(contenedorGlobal).addClass('container-home');
 	$(contenedorGlobal).removeClass('container-ribbon');
-	
+
 	$('img.logo').hide();
 }
 
@@ -28,6 +28,7 @@ function step2(){
 	$(contenedorGlobal).removeClass('container-home');
 	$(contenedorGlobal).addClass('container-ribbon');
 	$('img.logo').show();
+	$('img.logo-evento').hide();
 }
 
 function step3(){
@@ -44,106 +45,106 @@ function cerrarAviso(){
 }
 
 $(document).ready(function(){
-	
+
 	// Muestra el aviso de privacidad
 	$('.terminos-wrapper .message').on('click', function(){
 		abrirAviso();
 	});
-	
+
 	// Aceptar aviso de privacidad
 	$('.js-btn-aceptar-aviso').on('click', function(e){
 		e.preventDefault();
-		
+
 		$('.js-check-box-aviso').css('background', '#D98C34');
-		
+
 		$('.js-check-box-aviso').addClass('js-check-box-aviso-checked');
 		cerrarAviso();
 	});
-	
+
 	$('.js-check-box-aviso').on('click', function(e){
 		e.preventDefault();
 		var elemento = $(this);
-		
+
 		if(elemento.hasClass('js-check-box-aviso-checked')){
 			$('.js-check-box-aviso').css('background', 'white');
-			
+
 			$('.js-check-box-aviso').removeClass('js-check-box-aviso-checked');
 		}else{
 			abrirAviso();
 		}
 	});
-	
+
 	// Cerrar aviso de privacidad
 	$('.js-btn-cerrar-aviso').on('click', function(e){
 		e.preventDefault();
 		cerrarAviso();
 	});
-	
+
 	$('.js-tipo-tarjeta').on('click', function(e){
 		e.preventDefault();
 		var elemento = $(this);
 		var data = elemento.data('value');
-		
+
 		$('#entusuarios-id_tarjeta').val(data);
 		step2();
 	});
-	
+
 	// Al campo de texto número validara solo numeros
 	$('#entusuarios-txt_telefono_celular').keydown(function(e) {
 		validarSoloNumeros(e);
 	});
-	
+
 	// Al campo de texto número validara solo numeros
 	$('#entusuarios-txt_cp').keydown(function(e) {
 		validarSoloNumeros(e);
 	});
-	
+
 	// Al campo de texto número validara solo numeros
 	$('#entusuarios-num_edad').keydown(function(e) {
 		validarSoloNumeros(e);
 	});
-	
-	
+
+
 	// Al campo de texto número validara solo numeros
 	$('#entusuarios-num_patos').keydown(function(e) {
 		validarSoloNumeros(e);
 	});
-	
+
 	$('.js-boton-inicio').on('click', function(e){
 		e.preventDefault();
 		step1();
 	});
-	
-	
+
+
 	$('body').on(
 			'beforeSubmit',
 			'#form-usuario-participar',
 			function() {
 				var form = $(this);
-				
+
 //				if(!$('.js-check-box-aviso').hasClass('js-check-box-aviso-checked')){
-//					
+//
 //					swal({
 //						  title: "Espera",
 //						  text: "Debe leer el aviso de privacidad",
 //						  type: "warning",
 //						  showCancelButton: true,
-//						  
+//
 //						  closeOnConfirm: true
 //						});
-//					
+//
 //					return false;
 //				}
-				
+
 				// return false if form still have some validation errors
 				if (form.find('.has-error').length) {
 					return false;
 				}
-				
+
 				var l = Ladda.create(document.getElementById('js-btn-guardar-informacion'));
 			 	l.start();
 
-				var data = form.serialize(); 
+				var data = form.serialize();
 
 				$.ajax({
 					url : 'site/guardar-informacion',// url para peticion
@@ -155,7 +156,7 @@ $(document).ready(function(){
 						step3();
 						// Reseteamos el modal
 						document.getElementById("form-usuario-participar").reset();
-						
+
 						l.stop();
 					},
 					error:function(){
@@ -169,13 +170,13 @@ $(document).ready(function(){
 				});
 				return false;
 			});
-	
-	
+
+
 });
 
 /**
  * Valida que cuando se aprieta un boton sea solo números
- * 
+ *
  * @param e
  */
 function validarSoloNumeros(e) {

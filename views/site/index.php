@@ -9,6 +9,8 @@ $this->title = 'Fiesta americana';
 <div class="container container-home">
 	<!-- Main content Wrapper -->
 
+	<img class="logo-evento" src="webAssets/images/logo-plaza.png" alt="Plaza Isla">
+
 	<!-- Contenedor de las tarjetas -->
 	<div class="js-tarjetas-contenedor">
 

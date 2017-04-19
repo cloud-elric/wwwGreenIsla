@@ -17790,6 +17790,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/web\/webAssets\/images\/logo-plaza.png": {
+		"ft": 32768,
+		"iS": 9412,
+		"oA": 0,
+		"oAP": "\/web\/webAssets\/images\/logo-plaza.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/web\/webAssets\/images\/ribbon.png": {
 		"ft": 32768,
 		"iS": 8963,
@@ -17815,6 +17826,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/web\/webAssets\/js\/registro-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/web\/webAssets\/js\/site-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/web\/webAssets\/js\/site-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
