@@ -59,6 +59,12 @@
 		"oAP": "\/composer.lock",
 		"oF": 0
 		},
+	"\/config\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/config\/.gitignore",
+		"oF": 0
+		},
 	"\/config\/console.php": {
 		"ft": 8192,
 		"oA": 2,
