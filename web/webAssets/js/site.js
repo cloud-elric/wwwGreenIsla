@@ -25,6 +25,7 @@ function step1() {
 function step2() {
 	$(contenedorTarjetas).hide();
 	$(contenedorRegistro).show();
+	$(contenedorGlobal).removeClass('container-premio');
 	$(contenedorGlobal).removeClass('container-home');
 	$(contenedorGlobal).addClass('container-ribbon');
 	$('img.logo').attr('src', 'webAssets/images/logo-fa.png');
