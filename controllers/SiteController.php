@@ -7,7 +7,6 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\models\CatTiposTarjetas;
 use app\models\EntUsuarios;
 use app\models\CatPremios;
 use yii\db\Expression;
@@ -67,11 +66,9 @@ class SiteController extends Controller {
 	 * @return string
 	 */
 	public function actionIndex() {
-		$catTiposTarjetas = CatTiposTarjetas::find ()->where ( 'b_habilitado=1' )->all ();
 		$usuario = new EntUsuarios ();
 
 		return $this->render ( 'index', [
-				'catTiposTarjetas' => $catTiposTarjetas,
 				'usuario' => $usuario
 		] );
 	}
@@ -114,7 +111,7 @@ class SiteController extends Controller {
 				}
 			}
 
-			return $this->renderAjax ( $vistaPremio );
+			// return $this->renderAjax ( $vistaPremio );
 		}
 	}
 

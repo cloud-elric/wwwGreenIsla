@@ -17,13 +17,7 @@ $this->title = 'Fiesta americana';
 		<!-- Seleccion de Tarjeta -->
 		<div class="selecciona-tarjeta-wrapper">
 			<!-- <h3>Tarjeta de Crédito</h3> -->
-			<!-- <a class="btn btn-primary" href="#">Comenzar</a> -->
-			<?php
-			// Genera etiquetas radio a partir de un arreglo
-			foreach ( $catTiposTarjetas as $tipoTarjeta ) {
-				echo '<a data-value="' . $tipoTarjeta->id_tarjeta . '" class="btn btn-primary js-tipo-tarjeta" href="#">' . $tipoTarjeta->txt_nombre . '</a>';
-			}
-			?>
+			 <a class="btn btn-primary js-next-step" href="#">Comenzar</a> 
 		</div>
 
 		<!-- Termina Seleccion de Tarjeta -->
@@ -44,11 +38,6 @@ $this->title = 'Fiesta americana';
 			] );
 			?>
 				<?php
-				// Genera un input
-				echo $form->field ( $usuario, 'id_tarjeta' )->hiddenInput( [
-						'maxlength' => 150,
-						'placeholder'=>'Nombre'
-				] )->label(false);
 				// Genera un input
 				echo $form->field ( $usuario, 'txt_nombre_completo' )->textInput ( [
 						'maxlength' => 150,
