@@ -24,6 +24,12 @@ body
 	+box-shadow(0px 10px 30px -15px $secondary)
 	z-index: 20
 	+respond-to(xs)
+		width: 90%
+		top: 50%
+		left: 50%
+		margin-left: -45%
+		margin-top: -50%
+	+respond-to(xx)
 		width: 100%
 		position: absolute
 		top: 0
@@ -49,7 +55,7 @@ body
 
 	a.btn
 		width: 100%
-		+respond-to(xs)
+		+respond-to(xx)
 			position: fixed
 			bottom: 10px
 			left: 45%
@@ -125,12 +131,14 @@ body
 		margin-top: 150px
 		position: relative
 		+respond-to(xs)
-			width: 90%
+			width: 80%
 			margin: 0 auto
 		p
 			margin-bottom: 20px
 			font-size: 1.5em
 			text-align: left
+			+respond-to(xs)
+				font-size: 1.2em
 
 .container-ribbon,
 .container-premio
@@ -142,12 +150,15 @@ body
 
 	a
 		margin-top: 100px
+		+respond-to(xx)
+			margin-top: 50px
 
 .container-premio
 	background:
 		image: url("../images/logo-fa-with-ribbon.png")
 		position: top left
 		repeat: no-repeat
+		size: 60%
 
 .container-home
 	justify-content: center
@@ -183,8 +194,11 @@ body
 	bottom: 40px
 	right: 40px
 	+respond-to(xs)
-		left: 20px
+		width: 100px
+		margin-left: -50px
+		left: 50%
 		bottom: 20px
+
 
 .logo-evento
 	position: fixed

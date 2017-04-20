@@ -59,12 +59,6 @@
 		"oAP": "\/composer.lock",
 		"oF": 0
 		},
-	"\/config\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/config\/.gitignore",
-		"oF": 0
-		},
 	"\/config\/console.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -129,18 +123,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/mail\/layouts\/html.php",
-		"oF": 0
-		},
-	"\/models\/CatPremios.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/models\/CatPremios.php",
-		"oF": 0
-		},
-	"\/models\/CatTiposTarjetas.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/models\/CatTiposTarjetas.php",
 		"oF": 0
 		},
 	"\/models\/ContactForm.php": {
@@ -267,6 +249,18 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/runtime\/debug\/58f52e45b1230.data",
+		"oF": 0
+		},
+	"\/runtime\/debug\/58f903fcca769.data": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/runtime\/debug\/58f903fcca769.data",
+		"oF": 0
+		},
+	"\/runtime\/debug\/58f9040c454ae.data": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/runtime\/debug\/58f9040c454ae.data",
 		"oF": 0
 		},
 	"\/runtime\/debug\/index.data": {
@@ -17406,18 +17400,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/site\/mucha-suerte.php",
-		"oF": 0
-		},
-	"\/views\/site\/premio-instancia.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/views\/site\/premio-instancia.php",
-		"oF": 0
-		},
-	"\/views\/site\/premio-monedero.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/views\/site\/premio-monedero.php",
 		"oF": 0
 		},
 	"\/web\/.htaccess": {

@@ -1,24 +1,5 @@
 @charset "UTF-8";
 /*!
-	*	Sura Micrositio Cancún 2017
-	*	Micrositio de registro para el Evento Sura CASC 2017
-
-	# url        http://events.onex.mx/casc-sura2017/web/site/registro
-	# author      2 Geeks one Monkey <@2Gom>
-	# copyright   Copyright (c) 2017, Sura Micrositio Cancún 2017
-	*/
-/*!
-	--------------------------------------------------------
-	Base.sass
-	--------------------------------------------------------
-	0.0 - Tipografía
-	1.0 - Normalizar
-	2.0 - Basicos
-			## Utility
-	3.0 - Inicio
-	--------------------------------------------------------
-	*/
-/*!
 	-----------------------------------------------------------------------------
 
 	0.0 - Tipografía
@@ -431,6 +412,13 @@ body {
   z-index: 20; }
   @media screen and (max-width: 768px) {
     .aviso-box {
+      width: 90%;
+      top: 50%;
+      left: 50%;
+      margin-left: -45%;
+      margin-top: -50%; } }
+  @media screen and (max-width: 450px) {
+    .aviso-box {
       width: 100%;
       position: absolute;
       top: 0;
@@ -453,7 +441,7 @@ body {
         text-align: left; } }
   .aviso-box a.btn {
     width: 100%; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 450px) {
       .aviso-box a.btn {
         position: fixed;
         bottom: 10px;
@@ -524,12 +512,15 @@ body {
     position: relative; }
     @media screen and (max-width: 768px) {
       .container .premio {
-        width: 90%;
+        width: 80%;
         margin: 0 auto; } }
     .container .premio p {
       margin-bottom: 20px;
       font-size: 1.5em;
       text-align: left; }
+      @media screen and (max-width: 768px) {
+        .container .premio p {
+          font-size: 1.2em; } }
 
 .container-ribbon,
 .container-premio {
@@ -540,11 +531,16 @@ body {
   .container-ribbon a,
   .container-premio a {
     margin-top: 100px; }
+    @media screen and (max-width: 450px) {
+      .container-ribbon a,
+      .container-premio a {
+        margin-top: 50px; } }
 
 .container-premio {
   background-image: url("../images/logo-fa-with-ribbon.png");
   background-position: top left;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 60%; }
 
 .container-home {
   justify-content: center;
@@ -572,7 +568,9 @@ body {
   right: 40px; }
   @media screen and (max-width: 768px) {
     .logo {
-      left: 20px;
+      width: 100px;
+      margin-left: -50px;
+      left: 50%;
       bottom: 20px; } }
 
 .logo-evento {
