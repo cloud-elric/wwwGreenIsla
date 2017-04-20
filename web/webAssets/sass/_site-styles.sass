@@ -19,7 +19,7 @@ body
 	position: absolute
 	top: 50%
 	left: 50%
-	margin-left: -300px
+	margin-left: -30%
 	margin-top: -300px
 	+box-shadow(0px 10px 30px -15px $secondary)
 	z-index: 20
@@ -120,23 +120,20 @@ body
 	/* Para la pantalla de premio */
 
 	.premio
-		width: 500px
+		width: 690px
 		text-align: center
+		margin-top: 150px
+		position: relative
 		+respond-to(xs)
 			width: 90%
 			margin: 0 auto
-		h1,h3,p
-			margin-bottom: 10px
-		h1
-			color: $accent
-			max-width: 100%
-		h3
-			color: $primary
-
 		p
 			margin-bottom: 20px
+			font-size: 1.5em
+			text-align: left
 
-.container-ribbon
+.container-ribbon,
+.container-premio
 	flex-direction: column
 	background:
 		image: url("../images/ribbon.png")
@@ -146,25 +143,33 @@ body
 	a
 		margin-top: 100px
 
-
+.container-premio
+	background:
+		image: url("../images/logo-fa-with-ribbon.png")
+		position: top left
+		repeat: no-repeat
 
 .container-home
 	justify-content: center
 	align-items: center
 	background:
-		image: url("../images/background-with-logo.jpg")
+		image: url("../images/web-bkgd.jpg")
 		position: center
 		repeat: no-repeat
 		size: cover
+	+respond-to(xs)
+		background:
+			image: url("../images/web-bkgd-movil.jpg")
 
 
 	.selecciona-tarjeta-wrapper
 		text-align: center
+		margin-top: 300px
 		//margin-right: 70px
 		//margin-bottom: 150px
-		background-color: rgba(216, 216, 216, 0.3)
-		border-radius: 5px
-		padding: 20px
+		// background-color: rgba(216, 216, 216, 0.3)
+		// border-radius: 5px
+		// padding: 20px
 		h3
 			margin-bottom: 20px
 

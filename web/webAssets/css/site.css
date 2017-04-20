@@ -318,10 +318,11 @@ hr {
   box-shadow: none;
   margin: 0; }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-secondary:hover {
   color: #FFF;
-  background-color: #EAB92C;
-  border-color: #EAB92C; }
+  background-color: #A79D93;
+  border-color: #A79D93; }
 
 .btn-primary.focus,
 .btn-primary:focus {
@@ -335,8 +336,14 @@ hr {
   border-color: #EAB92C;
   background-image: none; }
 
-.hightlight {
+.highlight {
   color: #EAB92C; }
+
+.bold {
+  font-weight: 700; }
+
+.primary-color {
+  color: #D98C34; }
 
 .container-960 {
   max-width: 960px;
@@ -416,7 +423,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -300px;
+  margin-left: -30%;
   margin-top: -300px;
   -webkit-box-shadow: 0px 10px 30px -15px #A79D93;
   -moz-box-shadow: 0px 10px 30px -15px #A79D93;
@@ -511,42 +518,47 @@ body {
       .container .form-wrapper .form-cta-wrapper a {
         margin: 0 auto; }
   .container .premio {
-    width: 500px;
-    text-align: center; }
+    width: 690px;
+    text-align: center;
+    margin-top: 150px;
+    position: relative; }
     @media screen and (max-width: 768px) {
       .container .premio {
         width: 90%;
         margin: 0 auto; } }
-    .container .premio h1, .container .premio h3, .container .premio p {
-      margin-bottom: 10px; }
-    .container .premio h1 {
-      color: #EAB92C;
-      max-width: 100%; }
-    .container .premio h3 {
-      color: #D98C34; }
     .container .premio p {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      text-align: left; }
 
-.container-ribbon {
+.container-ribbon,
+.container-premio {
   flex-direction: column;
   background-image: url("../images/ribbon.png");
   background-position: top right;
   background-repeat: no-repeat; }
-  .container-ribbon a {
+  .container-ribbon a,
+  .container-premio a {
     margin-top: 100px; }
+
+.container-premio {
+  background-image: url("../images/logo-fa-with-ribbon.png");
+  background-position: top left;
+  background-repeat: no-repeat; }
 
 .container-home {
   justify-content: center;
   align-items: center;
-  background-image: url("../images/background-with-logo.jpg");
+  background-image: url("../images/web-bkgd.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .container-home {
+      background-image: url("../images/web-bkgd-movil.jpg"); } }
   .container-home .selecciona-tarjeta-wrapper {
     text-align: center;
-    background-color: rgba(216, 216, 216, 0.3);
-    border-radius: 5px;
-    padding: 20px; }
+    margin-top: 300px; }
     .container-home .selecciona-tarjeta-wrapper h3 {
       margin-bottom: 20px; }
     .container-home .selecciona-tarjeta-wrapper a {
@@ -574,3 +586,5 @@ body {
     .logo-evento {
       width: 90%;
       margin-left: -45%; } }
+
+/*# sourceMappingURL=site.css.map */

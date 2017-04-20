@@ -143,6 +143,12 @@
 		"oAP": "\/models\/ContactForm.php",
 		"oF": 0
 		},
+	"\/models\/EntUsuarios.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/models\/EntUsuarios.php",
+		"oF": 0
+		},
 	"\/models\/LoginForm.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -185,100 +191,76 @@
 		"oAP": "\/runtime\/.gitignore",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69cb54a73f.data": {
+	"\/runtime\/debug\/58f51f0ce745e.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69cb54a73f.data",
+		"oAP": "\/runtime\/debug\/58f51f0ce745e.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69d40676d4.data": {
+	"\/runtime\/debug\/58f51fb5c58fe.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69d40676d4.data",
+		"oAP": "\/runtime\/debug\/58f51fb5c58fe.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69d43308bb.data": {
+	"\/runtime\/debug\/58f524eb76420.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69d43308bb.data",
+		"oAP": "\/runtime\/debug\/58f524eb76420.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69d48d9040.data": {
+	"\/runtime\/debug\/58f5252182e0f.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69d48d9040.data",
+		"oAP": "\/runtime\/debug\/58f5252182e0f.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69d49a85c5.data": {
+	"\/runtime\/debug\/58f525c4bf181.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69d49a85c5.data",
+		"oAP": "\/runtime\/debug\/58f525c4bf181.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69d4a56f47.data": {
+	"\/runtime\/debug\/58f5277981167.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69d4a56f47.data",
+		"oAP": "\/runtime\/debug\/58f5277981167.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69d4aeea4b.data": {
+	"\/runtime\/debug\/58f52a2571a09.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69d4aeea4b.data",
+		"oAP": "\/runtime\/debug\/58f52a2571a09.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69d4bb315a.data": {
+	"\/runtime\/debug\/58f52dabad7e3.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69d4bb315a.data",
+		"oAP": "\/runtime\/debug\/58f52dabad7e3.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69d8c7dc59.data": {
+	"\/runtime\/debug\/58f52db1a270d.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69d8c7dc59.data",
+		"oAP": "\/runtime\/debug\/58f52db1a270d.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69e22cf745.data": {
+	"\/runtime\/debug\/58f52db46bd00.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69e22cf745.data",
+		"oAP": "\/runtime\/debug\/58f52db46bd00.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69e3428f76.data": {
+	"\/runtime\/debug\/58f52e434f608.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69e3428f76.data",
+		"oAP": "\/runtime\/debug\/58f52e434f608.data",
 		"oF": 0
 		},
-	"\/runtime\/debug\/58f69e6ec01c7.data": {
+	"\/runtime\/debug\/58f52e45b1230.data": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69e6ec01c7.data",
-		"oF": 0
-		},
-	"\/runtime\/debug\/58f69e7dbe657.data": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69e7dbe657.data",
-		"oF": 0
-		},
-	"\/runtime\/debug\/58f69e90ea8fa.data": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69e90ea8fa.data",
-		"oF": 0
-		},
-	"\/runtime\/debug\/58f69ee687f6b.data": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69ee687f6b.data",
-		"oF": 0
-		},
-	"\/runtime\/debug\/58f69f82c98f4.data": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/runtime\/debug\/58f69f82c98f4.data",
+		"oAP": "\/runtime\/debug\/58f52e45b1230.data",
 		"oF": 0
 		},
 	"\/runtime\/debug\/index.data": {
@@ -2031,30 +2013,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/vendor\/bower\/jquery.inputmask\/.editorconfig": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/jquery.inputmask\/.editorconfig",
-		"oF": 0
-		},
-	"\/vendor\/bower\/jquery.inputmask\/.eslintrc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/jquery.inputmask\/.eslintrc",
-		"oF": 0
-		},
-	"\/vendor\/bower\/jquery.inputmask\/.gitattributes": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/jquery.inputmask\/.gitattributes",
-		"oF": 0
-		},
-	"\/vendor\/bower\/jquery.inputmask\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/jquery.inputmask\/.gitignore",
-		"oF": 0
-		},
 	"\/vendor\/bower\/jquery.inputmask\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -2316,12 +2274,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"\/vendor\/bower\/jquery\/src\/.jshintrc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/jquery\/src\/.jshintrc",
-		"oF": 0
 		},
 	"\/vendor\/bower\/jquery\/src\/ajax.js": {
 		"ft": 64,
@@ -3237,24 +3189,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/vendor\/bower\/typeahead.js\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/typeahead.js\/.gitignore",
-		"oF": 0
-		},
-	"\/vendor\/bower\/typeahead.js\/.jshintrc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/typeahead.js\/.jshintrc",
-		"oF": 0
-		},
-	"\/vendor\/bower\/typeahead.js\/.travis.yml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/typeahead.js\/.travis.yml",
-		"oF": 0
-		},
 	"\/vendor\/bower\/typeahead.js\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -3887,12 +3821,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"\/vendor\/bower\/yii2-pjax\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/bower\/yii2-pjax\/.gitignore",
-		"oF": 0
-		},
 	"\/vendor\/bower\/yii2-pjax\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -3959,24 +3887,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"\/vendor\/cebe\/markdown\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/cebe\/markdown\/.gitignore",
-		"oF": 0
-		},
-	"\/vendor\/cebe\/markdown\/.scrutinizer.yml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/cebe\/markdown\/.scrutinizer.yml",
-		"oF": 0
-		},
-	"\/vendor\/cebe\/markdown\/.travis.yml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/cebe\/markdown\/.travis.yml",
-		"oF": 0
 		},
 	"\/vendor\/cebe\/markdown\/bin\/markdown": {
 		"ft": 8192,
@@ -8077,12 +7987,6 @@
 		"oAP": "\/vendor\/ezyang\/htmlpurifier\/LICENSE",
 		"oF": 0
 		},
-	"\/vendor\/ezyang\/htmlpurifier\/maintenance\/.htaccess": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/ezyang\/htmlpurifier\/maintenance\/.htaccess",
-		"oF": 0
-		},
 	"\/vendor\/ezyang\/htmlpurifier\/maintenance\/add-vimline.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -8233,12 +8137,6 @@
 		"oAP": "\/vendor\/ezyang\/htmlpurifier\/plugins\/modx.txt",
 		"oF": 0
 		},
-	"\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/.gitignore",
-		"oF": 0
-		},
 	"\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/Changelog": {
 		"ft": 8192,
 		"oA": 2,
@@ -8255,18 +8153,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/htmlpurifier.php",
-		"oF": 0
-		},
-	"\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/htmlpurifier\/LICENSE": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/htmlpurifier\/LICENSE",
-		"oF": 0
-		},
-	"\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/htmlpurifier\/README": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/htmlpurifier\/README",
 		"oF": 0
 		},
 	"\/vendor\/ezyang\/htmlpurifier\/plugins\/phorum\/info.txt": {
@@ -8393,18 +8279,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/vendor\/ezyang\/htmlpurifier\/WYSIWYG",
-		"oF": 0
-		},
-	"\/vendor\/fzaninotto\/faker\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/fzaninotto\/faker\/.gitignore",
-		"oF": 0
-		},
-	"\/vendor\/fzaninotto\/faker\/.travis.yml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/fzaninotto\/faker\/.travis.yml",
 		"oF": 0
 		},
 	"\/vendor\/fzaninotto\/faker\/CHANGELOG.md": {
@@ -11463,24 +11337,6 @@
 		"oAP": "\/vendor\/phpspec\/php-diff\/README",
 		"oF": 0
 		},
-	"\/vendor\/swiftmailer\/swiftmailer\/.gitattributes": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/swiftmailer\/swiftmailer\/.gitattributes",
-		"oF": 0
-		},
-	"\/vendor\/swiftmailer\/swiftmailer\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/swiftmailer\/swiftmailer\/.gitignore",
-		"oF": 0
-		},
-	"\/vendor\/swiftmailer\/swiftmailer\/.travis.yml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/swiftmailer\/swiftmailer\/.travis.yml",
-		"oF": 0
-		},
 	"\/vendor\/swiftmailer\/swiftmailer\/CHANGES": {
 		"ft": 8192,
 		"oA": 2,
@@ -13808,12 +13664,6 @@
 		"oAP": "\/vendor\/yiisoft\/yii2-codeception\/TestCase.php",
 		"oF": 0
 		},
-	"\/vendor\/yiisoft\/yii2-composer\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/yiisoft\/yii2-composer\/.gitignore",
-		"oF": 0
-		},
 	"\/vendor\/yiisoft\/yii2-composer\/CHANGELOG.md": {
 		"cS": 0,
 		"eF": 1,
@@ -14793,18 +14643,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/vendor\/yiisoft\/yii2\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/yiisoft\/yii2\/.gitignore",
-		"oF": 0
-		},
-	"\/vendor\/yiisoft\/yii2\/.htaccess": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/yiisoft\/yii2\/.htaccess",
-		"oF": 0
-		},
 	"\/vendor\/yiisoft\/yii2\/assets\/yii.activeForm.js": {
 		"ft": 64,
 		"mi": 1,
@@ -15438,12 +15276,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/vendor\/yiisoft\/yii2\/console\/Response.php",
-		"oF": 0
-		},
-	"\/vendor\/yiisoft\/yii2\/console\/runtime\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/vendor\/yiisoft\/yii2\/console\/runtime\/.gitignore",
 		"oF": 0
 		},
 	"\/vendor\/yiisoft\/yii2\/data\/ActiveDataProvider.php": {
@@ -17564,10 +17396,10 @@
 		"oAP": "\/views\/site\/index.php",
 		"oF": 0
 		},
-	"\/views\/site\/premio-descuento.php": {
+	"\/views\/site\/mucha-suerte.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/views\/site\/premio-descuento.php",
+		"oAP": "\/views\/site\/mucha-suerte.php",
 		"oF": 0
 		},
 	"\/views\/site\/premio-instancia.php": {
@@ -17594,71 +17426,71 @@
 		"oAP": "\/web\/assets\/.gitignore",
 		"oF": 0
 		},
-	"\/web\/assets\/5c03754f\/jquery.js": {
+	"\/web\/assets\/1f017a0d\/jquery.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/web\/assets\/5c03754f\/jquery-min.js",
+		"oAP": "\/web\/assets\/1f017a0d\/jquery-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/web\/assets\/5c03754f\/jquery.min.js": {
+	"\/web\/assets\/1f017a0d\/jquery.min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/web\/assets\/5c03754f\/jquery.min-min.js",
+		"oAP": "\/web\/assets\/1f017a0d\/jquery.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/web\/assets\/5c03754f\/jquery.min.map": {
+	"\/web\/assets\/1f017a0d\/jquery.min.map": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/web\/assets\/5c03754f\/jquery.min.map",
+		"oAP": "\/web\/assets\/1f017a0d\/jquery.min.map",
 		"oF": 0
 		},
-	"\/web\/assets\/8ede8934\/yii.activeForm.js": {
+	"\/web\/assets\/70c43157\/yii.activeForm.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/web\/assets\/8ede8934\/yii.activeForm-min.js",
+		"oAP": "\/web\/assets\/70c43157\/yii.activeForm-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/web\/assets\/8ede8934\/yii.captcha.js": {
+	"\/web\/assets\/70c43157\/yii.captcha.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/web\/assets\/8ede8934\/yii.captcha-min.js",
+		"oAP": "\/web\/assets\/70c43157\/yii.captcha-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/web\/assets\/8ede8934\/yii.gridView.js": {
+	"\/web\/assets\/70c43157\/yii.gridView.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/web\/assets\/8ede8934\/yii.gridView-min.js",
+		"oAP": "\/web\/assets\/70c43157\/yii.gridView-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/web\/assets\/8ede8934\/yii.js": {
+	"\/web\/assets\/70c43157\/yii.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/web\/assets\/8ede8934\/yii-min.js",
+		"oAP": "\/web\/assets\/70c43157\/yii-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/web\/assets\/8ede8934\/yii.validation.js": {
+	"\/web\/assets\/70c43157\/yii.validation.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/web\/assets\/8ede8934\/yii.validation-min.js",
+		"oAP": "\/web\/assets\/70c43157\/yii.validation-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -17741,16 +17573,6 @@
 		"oAP": "\/web\/webAssets\/fonts\/ionicons\/ionicons.woff",
 		"oF": 0
 		},
-	"\/web\/webAssets\/images\/background-with-logo.jpg": {
-		"ft": 16384,
-		"iS": 86502,
-		"oA": 0,
-		"oAP": "\/web\/webAssets\/images\/background-with-logo.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/web\/webAssets\/images\/check-box.png": {
 		"ft": 32768,
 		"iS": 328,
@@ -17784,11 +17606,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/web\/webAssets\/images\/logo-plaza.png": {
+	"\/web\/webAssets\/images\/logo-giro.png": {
 		"ft": 32768,
-		"iS": 9412,
+		"iS": 9138,
 		"oA": 0,
-		"oAP": "\/web\/webAssets\/images\/logo-plaza.png",
+		"oAP": "\/web\/webAssets\/images\/logo-giro.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -17804,6 +17626,26 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/web\/webAssets\/images\/web-bkgd-movil.jpg": {
+		"ft": 16384,
+		"iS": 109896,
+		"oA": 0,
+		"oAP": "\/web\/webAssets\/images\/web-bkgd-movil.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/web\/webAssets\/images\/web-bkgd.jpg": {
+		"ft": 16384,
+		"iS": 251617,
+		"oA": 0,
+		"oAP": "\/web\/webAssets\/images\/web-bkgd.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/web\/webAssets\/js\/jquery-3.1.1.min.js": {
@@ -17831,6 +17673,15 @@
 		"oAP": "\/web\/webAssets\/js\/site-min-min.js",
 		"oF": 0,
 		"sC": 1,
+		"tS": 0
+		},
+	"\/web\/webAssets\/js\/site.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/web\/webAssets\/js\/site-min.js",
+		"oF": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/web\/webAssets\/plugins\/ladda-bootstrap\/dist\/ladda-themeless.min.css": {
@@ -17990,7 +17841,7 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
 		"oAP": "\/web\/webAssets\/css\/site.css",
 		"oF": 2,

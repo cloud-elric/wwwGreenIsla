@@ -20,7 +20,6 @@ function step1(){
 	$(contenedorGlobal).removeClass('container-ribbon');
 
 	$('img.logo').hide();
-	$('img.logo-evento').show();
 }
 
 function step2(){
@@ -28,13 +27,16 @@ function step2(){
 	$(contenedorRegistro).show();
 	$(contenedorGlobal).removeClass('container-home');
 	$(contenedorGlobal).addClass('container-ribbon');
+	$('img.logo').attr('src','webAssets/images/logo-fa.png');
 	$('img.logo').show();
-	$('img.logo-evento').hide();
 }
 
 function step3(){
 	$(contenedorRegistro).hide();
 	$(contenedorPremio).show();
+	$('img.logo').attr('src','webAssets/images/logo-giro.png');
+	$(contenedorGlobal).removeClass('container-ribbon');
+	$(contenedorGlobal).addClass('container-premio');
 }
 
 function abrirAviso(){

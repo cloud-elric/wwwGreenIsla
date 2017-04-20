@@ -9,15 +9,15 @@ $this->title = 'Fiesta americana';
 <div class="container container-home">
 	<!-- Main content Wrapper -->
 
-	<img class="logo-evento" src="webAssets/images/logo-plaza.png" alt="Plaza Isla">
+	<!-- <img class="logo-evento" src="webAssets/images/logo-plaza.png" alt="Plaza Isla"> -->
 
 	<!-- Contenedor de las tarjetas -->
 	<div class="js-tarjetas-contenedor">
 
 		<!-- Seleccion de Tarjeta -->
 		<div class="selecciona-tarjeta-wrapper">
-			<h3>Tarjeta de Crédito</h3>
-
+			<!-- <h3>Tarjeta de Crédito</h3> -->
+			<!-- <a class="btn btn-primary" href="#">Comenzar</a> -->
 			<?php
 			// Genera etiquetas radio a partir de un arreglo
 			foreach ( $catTiposTarjetas as $tipoTarjeta ) {
@@ -78,7 +78,7 @@ $this->title = 'Fiesta americana';
 				<div class="terminos-wrapper">
 					<div class="check-box js-check-box-aviso"></div>
 					<p class="message">
-						He leído y acepto el <span id="aviso-trigger" class="hightlight">aviso
+						He leído y acepto el <span id="aviso-trigger" class="highlight">aviso
 							de privacidad</span>
 					</p>
 				</div>
@@ -118,7 +118,7 @@ $this->title = 'Fiesta americana';
 
       <p><strong>GRUPO POSADAS, S.A.B. DE C.V.</strong> y sus filiales y/o subsidiarias (en lo sucesivo, Posadas), con domicilio en Prolongación Paseo de la Reforma # 1015. Piso 9. Col. Santa Fe Del. Álvaro Obregón C. P. 01210 México, D.F., es el responsable del tratamiento de sus Datos Personales. La información que nos proporciona será utilizada por Posadas para prestar los servicios que usted le solicita: reservaciones, compra de paquetes vacacionales, membresia del club vacacional, afiliación a nuestros programas de lealtad, organización de eventos y reuniones sociales, compra de productos y/o servicios turísticos. Asimismo se puede utilizar la información para ofrecerle promociones y productos turísticos y comerciales, servicios especiales, boletines informativos, encuestas, sorteos de premios y otros concursos. Usted podrá consultar el Aviso de Privacidad completo publicado en la página de internet <a href="www.posadas.com/es/privacidad">www.posadas.com/es/privacidad.</a></p>
 			<p>Consiento que mis datos personales sean utilizados para finalidades y conforme a lo establecido en el Aviso de Privacidad.</p>
-      <a class="btn btn-simple js-btn-aceptar-aviso" href=""> Acepto </a>
+      <a class="btn btn-secondary js-btn-aceptar-aviso" href=""> Acepto </a>
 
 
   </div>
