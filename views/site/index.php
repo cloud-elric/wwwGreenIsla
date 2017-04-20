@@ -17,7 +17,7 @@ $this->title = 'Fiesta americana';
 		<!-- Seleccion de Tarjeta -->
 		<div class="selecciona-tarjeta-wrapper">
 			<!-- <h3>Tarjeta de Crédito</h3> -->
-			 <a class="btn btn-primary js-next-step" href="#">Comenzar</a> 
+			 <a class="btn btn-primary js-next-step" href="#">Comenzar</a>
 		</div>
 
 		<!-- Termina Seleccion de Tarjeta -->
@@ -61,7 +61,7 @@ $this->title = 'Fiesta americana';
 				// Genera un input
 				echo $form->field ( $usuario, 'num_patos' )->textInput ( [
 						'maxlength' => 3,
-						'placeholder'=>'Cantidad de patos'
+						'placeholder'=>'Conteo de Objetos'
 				] )->label(false);
 				?>
 				<div class="terminos-wrapper">
