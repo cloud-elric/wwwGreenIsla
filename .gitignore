@@ -31,3 +31,6 @@ tests/_support/_generated
 
 
 config.codekit3
+
+
+/config/db.php

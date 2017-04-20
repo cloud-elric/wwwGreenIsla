@@ -143,6 +143,12 @@
 		"oAP": "\/models\/ContactForm.php",
 		"oF": 0
 		},
+	"\/models\/EntUsuarios.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/models\/EntUsuarios.php",
+		"oF": 0
+		},
 	"\/models\/LoginForm.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -17829,6 +17835,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/web\/webAssets\/js\/site-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/web\/webAssets\/js\/site.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/web\/webAssets\/js\/site-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
