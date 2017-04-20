@@ -16,7 +16,6 @@ use Yii;
  * @property string $num_patos
  * @property string $fch_registro
  *
- * @property CatTiposTarjetas $idTarjeta
  */
 class EntUsuarios extends \yii\db\ActiveRecord
 {
