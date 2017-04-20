@@ -89,6 +89,83 @@ class SiteController extends Controller {
 	}
 
 	/**
+	 * Descarga un csv con la informacion necesaria
+	 */
+	public function actionDescargarRegistros892klasl3l(){
+		$usuarios = EntUsuarios::find()->all();
+
+		$arrayCsv = [ ];
+		$i = 0;
+		
+		foreach ( $usuarios as $data ) {
+			
+			$arrayCsv [$i] ['nombreCompleto'] = $data->txt_nombre_completo;
+			$arrayCsv [$i] ['telefonoCelular'] = $data->txt_telefono_celular;
+			$arrayCsv [$i] ['codigoPostal'] = $data->txt_cp;
+			$arrayCsv [$i] ['numEdad'] = $data->num_edad;
+			$arrayCsv [$i] ['numPatos'] = $data->num_patos;
+			$arrayCsv [$i] ['fchRegistro'] = $data->fch_registro;
+			
+			$i++;
+		}
+		
+		
+	//print_r($arrayCsv );
+	//exit ();
+		
+		$this->downloadSendHeaders ( 'reporte.csv' );
+		
+		echo $this->array2Csv ( $arrayCsv );
+		die();
+
+	}
+
+		private function array2Csv($array) {
+		if (count ( $array ) == 0) {
+			return null;
+		}
+		ob_start();
+		$df = fopen ( "php://output", "w" );
+		fputcsv ( $df, [ 
+				'Nombre completo',
+				'Telefono',
+				'C.P.',
+				'Edad',
+				'Num patos',
+				'Fecha registro' 
+		]
+		 );
+
+		foreach ( $array as $row ) {
+			fputcsv ( $df, $row );
+		}
+
+		fclose ( $df );
+		return ob_get_clean();
+	}
+	
+	
+	
+	
+	private function downloadSendHeaders($filename) {
+		// disable caching
+		$now = gmdate ( "D, d M Y H:i:s" );
+		// header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
+		header ( "Cache-Control: max-age=0, no-cache, must-revalidate, proxy-revalidate" );
+		header ( "Last-Modified: {$now} GMT" );
+		
+		// force download
+		header ( "Content-Type: application/force-download" );
+		header ( "Content-Type: application/octet-stream" );
+		// comentario sin sentido
+		header ( "Content-Type: application/download" );
+		
+		// disposition / encoding on response body
+		header ( "Content-Disposition: attachment;filename={$filename}" );
+		header ( "Content-Transfer-Encoding: binary" );
+	}
+
+	/**
 	 * Cambia el formato de la fecha
 	 *
 	 * @param unknown $string
@@ -110,33 +187,4 @@ class SiteController extends Controller {
 		return $fecha;
 	}
 
-	/**
-	 * Login action.
-	 *
-	 * @return string
-	 */
-	public function actionLogin() {
-		if (! Yii::$app->user->isGuest) {
-			return $this->goHome ();
-		}
-
-		$model = new LoginForm ();
-		if ($model->load ( Yii::$app->request->post () ) && $model->login ()) {
-			return $this->goBack ();
-		}
-		return $this->render ( 'login', [
-				'model' => $model
-		] );
-	}
-
-	/**
-	 * Logout action.
-	 *
-	 * @return string
-	 */
-	public function actionLogout() {
-		Yii::$app->user->logout ();
-
-		return $this->goHome ();
-	}
 }
