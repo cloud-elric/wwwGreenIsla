@@ -32,5 +32,8 @@ tests/_support/_generated
 
 config.codekit3
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Terraza-atenea
 /config/db.php

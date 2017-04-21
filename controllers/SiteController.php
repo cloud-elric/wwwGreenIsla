@@ -7,9 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\models\CatTiposTarjetas;
 use app\models\EntUsuarios;
-use app\models\CatPremios;
 use yii\db\Expression;
 
 class SiteController extends Controller {
@@ -17,107 +15,156 @@ class SiteController extends Controller {
 	 * @inheritdoc
 	 */
 	public function behaviors() {
-		return [ 
-				'access' => [ 
+		return [
+				'access' => [
 						'class' => AccessControl::className (),
-						'only' => [ 
-								'logout' 
+						'only' => [
+								'logout'
 						],
-						'rules' => [ 
-								[ 
-										'actions' => [ 
-												'logout' 
+						'rules' => [
+								[
+										'actions' => [
+												'logout'
 										],
 										'allow' => true,
-										'roles' => [ 
-												'@' 
-										] 
-								] 
-						] 
+										'roles' => [
+												'@'
+										]
+								]
+						]
 				],
-				'verbs' => [ 
+				'verbs' => [
 						'class' => VerbFilter::className (),
-						'actions' => [ 
-								'logout' => [ 
-										'post' 
-								] 
-						] 
-				] 
+						'actions' => [
+								'logout' => [
+										'post'
+								]
+						]
+				]
 		];
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
 	public function actions() {
-		return [ 
-				'error' => [ 
-						'class' => 'yii\web\ErrorAction' 
+		return [
+				'error' => [
+						'class' => 'yii\web\ErrorAction'
 				],
-				'captcha' => [ 
+				'captcha' => [
 						'class' => 'yii\captcha\CaptchaAction',
-						'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null 
-				] 
+						'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null
+				]
 		];
 	}
-	
+
 	/**
 	 * Displays homepage.
 	 *
 	 * @return string
 	 */
 	public function actionIndex() {
-		$catTiposTarjetas = CatTiposTarjetas::find ()->where ( 'b_habilitado=1' )->all ();
 		$usuario = new EntUsuarios ();
-		
-		return $this->render ( 'index', [ 
-				'catTiposTarjetas' => $catTiposTarjetas,
-				'usuario' => $usuario 
+
+		return $this->render ( 'index', [
+				'usuario' => $usuario
 		] );
 	}
-	
+
 	/**
 	 * Guarda la informacion
 	 */
 	public function actionGuardarInformacion() {
 		$usuario = new EntUsuarios ();
-		
-		if ($usuario->load ( Yii::$app->request->post () )) {
-			$premio = CatPremios::find ()->where ( [ 
-					'num_codigo' => $usuario->num_patos,
-					'b_reclamado' => '0' 
-			] )->andWhere ( new Expression ( 'fch_reclamado IS NULL' ) )->one ();
-			
-			$vistaPremio = 'premio-descuento';
-			
-			$premioEntregadoHoy = CatPremios::find()->where(new Expression ( 'DATE(fch_reclamado) = DATE(NOW())' ))->all();
-						
-			if ($premio && count($premioEntregadoHoy)==0) {
-				
-					$usuario->id_premio = $premio->id_premio;
-					
-					if ($premio->txt_nombre == 'Monedero') {
-						$vistaPremio = 'premio-monedero';
-					} else if ($premio->txt_nombre == 'Estancia en villas') {
-						$vistaPremio = 'premio-instancia';
-					}
-				
-			} else {
-				$usuario->id_premio = 1;
-			}
-			
+
+		if ($usuario->load ( Yii::$app->request->post () )) {	
+
 			if ($usuario->save ()) {
-				if ($premio  && count($premioEntregadoHoy)==0) {
-					$premio->b_reclamado = 1;
-					$premio->fch_reclamado = $this->getFechaActual ();
-					$premio->save ();
-				}
+				
 			}
-			
-			return $this->renderAjax ( $vistaPremio );
+
+			return $this->renderAjax ( 'mucha-suerte' );
 		}
 	}
+
+	/**
+	 * Descarga un csv con la informacion necesaria
+	 */
+	public function actionDescargarRegistros892klasl3l(){
+		$usuarios = EntUsuarios::find()->all();
+
+		$arrayCsv = [ ];
+		$i = 0;
+		
+		foreach ( $usuarios as $data ) {
+			
+			$arrayCsv [$i] ['nombreCompleto'] = $data->txt_nombre_completo;
+			$arrayCsv [$i] ['telefonoCelular'] = $data->txt_telefono_celular;
+			$arrayCsv [$i] ['codigoPostal'] = $data->txt_cp;
+			$arrayCsv [$i] ['numEdad'] = $data->num_edad;
+			$arrayCsv [$i] ['numPatos'] = $data->num_patos;
+			$arrayCsv [$i] ['fchRegistro'] = $data->fch_registro;
+			
+			$i++;
+		}
+		
+		
+	//print_r($arrayCsv );
+	//exit ();
+		
+		$this->downloadSendHeaders ( 'reporte.csv' );
+		
+		echo $this->array2Csv ( $arrayCsv );
+		die();
+
+	}
+
+		private function array2Csv($array) {
+		if (count ( $array ) == 0) {
+			return null;
+		}
+		ob_start();
+		$df = fopen ( "php://output", "w" );
+		fputcsv ( $df, [ 
+				'Nombre completo',
+				'Telefono',
+				'C.P.',
+				'Edad',
+				'Num patos',
+				'Fecha registro' 
+		]
+		 );
+
+		foreach ( $array as $row ) {
+			fputcsv ( $df, $row );
+		}
+
+		fclose ( $df );
+		return ob_get_clean();
+	}
 	
+	
+	
+	
+	private function downloadSendHeaders($filename) {
+		// disable caching
+		$now = gmdate ( "D, d M Y H:i:s" );
+		// header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
+		header ( "Cache-Control: max-age=0, no-cache, must-revalidate, proxy-revalidate" );
+		header ( "Last-Modified: {$now} GMT" );
+		
+		// force download
+		header ( "Content-Type: application/force-download" );
+		header ( "Content-Type: application/octet-stream" );
+		// comentario sin sentido
+		header ( "Content-Type: application/download" );
+		
+		// disposition / encoding on response body
+		header ( "Content-Disposition: attachment;filename={$filename}" );
+		header ( "Content-Transfer-Encoding: binary" );
+	}
+
 	/**
 	 * Cambia el formato de la fecha
 	 *
@@ -127,46 +174,17 @@ class SiteController extends Controller {
 		$date = date_create ( $string );
 		return date_format ( $date, "d-M-Y" );
 	}
-	
+
 	/**
 	 * Obtenemos la fecha actual para almacenarla
 	 *
 	 * @return string
 	 */
 	private function getFechaActual() {
-		
+
 		// Inicializamos la fecha y hora actual
 		$fecha = date ( 'Y-m-d H:i:s', time () );
 		return $fecha;
 	}
-	
-	/**
-	 * Login action.
-	 *
-	 * @return string
-	 */
-	public function actionLogin() {
-		if (! Yii::$app->user->isGuest) {
-			return $this->goHome ();
-		}
-		
-		$model = new LoginForm ();
-		if ($model->load ( Yii::$app->request->post () ) && $model->login ()) {
-			return $this->goBack ();
-		}
-		return $this->render ( 'login', [ 
-				'model' => $model 
-		] );
-	}
-	
-	/**
-	 * Logout action.
-	 *
-	 * @return string
-	 */
-	public function actionLogout() {
-		Yii::$app->user->logout ();
-		
-		return $this->goHome ();
-	}
+
 }

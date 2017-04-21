@@ -122,28 +122,28 @@ hr
 .btn.focus,
 .btn:active.focus,
 .btn:active:focus,
-.btn:focus 
+.btn:focus
 	outline: none
 	outline-offset: -2px
 
 .btn:focus,
-.btn:hover 
+.btn:hover
 	text-decoration: none
 
-.btn.focus 
+.btn.focus
 	text-decoration: none
 
 .btn.active,
-.btn:active 
+.btn:active
 	background-image: none
 	outline: 0
 
 .btn.disabled,
-.btn:disabled 
+.btn:disabled
 	cursor: not-allowed
 	opacity: .65
 
-.btn-primary 
+.btn-primary
 	color: $white
 	background-color: $primary
 	border-color: $primary
@@ -162,13 +162,14 @@ hr
 	+box-shadow(none)
 	margin: 0
 
-.btn-primary:hover 
+.btn-primary:hover,
+.btn-secondary:hover
 	color: $white
-	background-color: $accent
-	border-color: $accent
+	background-color: $secondary
+	border-color: $secondary
 
 .btn-primary.focus,
-.btn-primary:focus 
+.btn-primary:focus
 	background-color: $accent
 	border-color: $accent
 
@@ -178,10 +179,16 @@ hr
 	background-color: $accent
 	border-color: $accent
 	background-image: none
-  	
 
-.hightlight
+
+.highlight
 	color: $accent
+
+.bold
+	font-weight: $bold
+
+.primary-color
+	color: $primary
 
 
 .container-960

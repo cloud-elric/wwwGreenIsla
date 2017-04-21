@@ -125,18 +125,6 @@
 		"oAP": "\/mail\/layouts\/html.php",
 		"oF": 0
 		},
-	"\/models\/CatPremios.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/models\/CatPremios.php",
-		"oF": 0
-		},
-	"\/models\/CatTiposTarjetas.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/models\/CatTiposTarjetas.php",
-		"oF": 0
-		},
 	"\/models\/ContactForm.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -17570,22 +17558,10 @@
 		"oAP": "\/views\/site\/index.php",
 		"oF": 0
 		},
-	"\/views\/site\/premio-descuento.php": {
+	"\/views\/site\/mucha-suerte.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/views\/site\/premio-descuento.php",
-		"oF": 0
-		},
-	"\/views\/site\/premio-instancia.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/views\/site\/premio-instancia.php",
-		"oF": 0
-		},
-	"\/views\/site\/premio-monedero.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/views\/site\/premio-monedero.php",
+		"oAP": "\/views\/site\/mucha-suerte.php",
 		"oF": 0
 		},
 	"\/web\/.htaccess": {
@@ -17747,16 +17723,6 @@
 		"oAP": "\/web\/webAssets\/fonts\/ionicons\/ionicons.woff",
 		"oF": 0
 		},
-	"\/web\/webAssets\/images\/background-with-logo.jpg": {
-		"ft": 16384,
-		"iS": 86502,
-		"oA": 0,
-		"oAP": "\/web\/webAssets\/images\/background-with-logo.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/web\/webAssets\/images\/check-box.png": {
 		"ft": 32768,
 		"iS": 328,
@@ -17790,11 +17756,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/web\/webAssets\/images\/logo-plaza.png": {
+	"\/web\/webAssets\/images\/logo-giro.png": {
 		"ft": 32768,
-		"iS": 9412,
+		"iS": 9138,
 		"oA": 0,
-		"oAP": "\/web\/webAssets\/images\/logo-plaza.png",
+		"oAP": "\/web\/webAssets\/images\/logo-giro.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -17810,6 +17776,26 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/web\/webAssets\/images\/web-bkgd-movil.jpg": {
+		"ft": 16384,
+		"iS": 109896,
+		"oA": 0,
+		"oAP": "\/web\/webAssets\/images\/web-bkgd-movil.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/web\/webAssets\/images\/web-bkgd.jpg": {
+		"ft": 16384,
+		"iS": 251617,
+		"oA": 0,
+		"oAP": "\/web\/webAssets\/images\/web-bkgd.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/web\/webAssets\/js\/jquery-3.1.1.min.js": {
@@ -18007,8 +17993,8 @@
 		"ft": 2,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/web\/webAssets\/css\/site.css",
-		"oF": 2,
+		"oAP": "\/web\/webAssets\/sass\/site.css",
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
